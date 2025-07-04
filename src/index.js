@@ -49,11 +49,33 @@ const pizzaData = [
 function App() {
   return (
     <div>
-      <h1> Hello React !! </h1>
+      <Header />
+      <Menu />
+      <Footer />
+    </div>
+  );
+}
+
+function Header() {
+  return <h1>Teja's Pizzeria</h1>;
+}
+
+function Menu() {
+  return (
+    <div>
+      <h2>Our menu</h2>
       <Pizza />
       <Pizza />
       <Pizza />
     </div>
+  );
+}
+
+function Footer() {
+  return React.createElement(
+    "footer",
+    null,
+    ` ${new Date().toLocaleTimeString()} We're currently open`
   );
 }
 
